@@ -33,6 +33,44 @@
         </a-entity>
         <a-entity id="snow" position="0 6 -15" particle-system="color: #ffffff"></a-entity>
             </a-marker>
+
+    <!--Reading my dpsd marker-->
+                <a-marker-camera type='pattern' url='assets/pattern-dpsd.patt'>
+                <!--Showing my name and the image-->
+                <a-text value="Vasilis" position="1 2 0" ></a-text>
+                <a-text value="Georntamilis" position="1 3.5 0"></a-text>
+                <a-image src="assets/yugi.jpg" position="0 0.5 0"></a-image>
+                </a-marker-camera>
+
+
+                <!--Define the gltf hydro asset-->
+                <a-assets>
+                <a-asset-item id="hydro" src="assets/hydrogen.gltf"></a-asset-item>
+                </a-assets>
+                <!--Reading and showing the H atom-->
+                <a-marker type='pattern' url='assets/pattern-card-H.patt'>
+                <!--use the glb hydro model-->
+                <a-entity gltf-model="#hydro" scale= "0.2 0.2 0.2";></a-entity>
+                </a-marker>
+
+
+                <!--Define the gltf oxy asset-->
+                <a-assets>
+                <a-asset-item id="oxy" src="assets/oxygen.gltf"></a-asset-item>
+                </a-assets>
+                <!--Reading and showing the O atom-->
+                <a-marker type='pattern' url='assets/pattern-card-O.patt'>
+                <!--use your glb oxy model-->
+                <a-entity gltf-model="#oxy" scale= "0.5 0.5 0.5";></a-entity>
+                </a-marker>
+
+
+
+
+
+
+
+
         <a-entity camera></a-entity>
         </a-scene>
     </body>
